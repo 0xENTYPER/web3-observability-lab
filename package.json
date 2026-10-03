@@ -1,0 +1,22 @@
+{
+  "name": "web3-observability-lab",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "check": "tsc --noEmit",
+    "build": "tsc",
+    "test": "vitest run",
+    "report": "npm run build --silent && node dist/cli.js fixtures/observations.json",
+    "probe": "npm run build --silent && node dist/probe-cli.js"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.0",
+    "typescript": "^5.8.0",
+    "vitest": "^5.0.0"
+  },
+  "license": "MIT"
+}
